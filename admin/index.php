@@ -11,11 +11,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
-    <h1>PERPUS SMKN 1 SBG</h1>
+    <h1 class="m-3">PERPUSTAKAAN SMKN 1 SUBANG</h1>
     <!-- Create atau menambahkan data baru, Data akan di proses dan dikirim ke add.php -->
     
     <div class="card">
-    <div class="card mt-5">
+    <div class="card mt-3">
     <div class="card-body">
     <div class="card-title"><h3>Formulir Data Buku</h3></div>
     <form method="post" action="add.php">
@@ -41,7 +41,7 @@
     </div>
     </div>
     <!-- read atau menampilka data dari database -->
-    <table class="table table-dark table-striped mt-5">
+    <table class="table table-success table-striped mt-3">
         <thead>              
         <tr>
             <th scope="col">No.</th>
@@ -64,8 +64,8 @@
             <td><?= $dt['Nama_penerbit']?></td>
             <td><?= $dt['Jumlah_buku']?></td>
             <td><?= $dt['Tahun_terbit']?></td>
-            <td><a href="update.php?id=<?= $dt['Id_buku']?>" class="text-light">Ubah</a></td>
-            <td><a href="delete.php?id=<?= $dt['Id_buku']?>" class="text-light" onclick="return confirm('Anda yakin menghapus data ini?')">Hapus</a></td>
+            <td><a href="update.php?id=<?= $dt['Id_buku']?>" class="text-dark">Ubah</a></td>
+            <td><a href="delete.php?id=<?= $dt['Id_buku']?>" class="text-dark" onclick="return confirm('Anda yakin menghapus data ini?')">Hapus</a></td>
         </tr>
     <?php 
         endwhile;
