@@ -1,7 +1,8 @@
 <?php 
-    //panggil connect
-    require_once 'connect.php';
+    // Panggil connect.php menggunakan path relatif
+    require_once '../connect.php';
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -49,8 +50,8 @@
                 <h1 class="fs-4"><span class="bg-white text-dark rounded-2 shadow px-2 me-2">PERPUS</span><span class="text-white">SMKN 1 SUBANG</span></h1>
                
                 <ul class="list-unstyled px-2">
-                    <li class=""><a href="dashboard.php" class="text-decoration-none px-3 py-2 d-block"><ion-icon name="speedometer-outline" class="me-2"></ion-icon>Dashboard</a></li>
-                    <li class="active"><a href="" class="text-decoration-none px-3 py-2 d-block"><ion-icon name="compass-outline" class="me-2"></ion-icon>Data Buku</a></li>
+                    <li class=""><a href="../dashboard.php" class="text-decoration-none px-3 py-2 d-block"><ion-icon name="speedometer-outline" class="me-2"></ion-icon>Dashboard</a></li>
+                    <li class="active"><a href="#" class="text-decoration-none px-3 py-2 d-block"><ion-icon name="compass-outline" class="me-2"></ion-icon>Data Buku</a></li>
                     <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block"><ion-icon name="people" class="me-2"></ion-icon>Data Anggota</a></li>
                     <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block"><ion-icon name="receipt-outline" class="me-2"></ion-icon>Data Peminjam</a></li>
                 </ul>
@@ -67,28 +68,29 @@
         <!-- content section -->
         <div class="content">
 
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light d-flex">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Perpustakaan</a>
-                <ion-icon name="book-outline"></ion-icon>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="dashboard.php">Dashboard</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                </li>
-            </ul>
+                <a class="navbar-brand" href="#">Perpustakaan<ion-icon name="book-outline" class="ms-2"></ion-icon></a>
+                <button button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="d-flex justify-content-between">
+                    <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../dashboard.php">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                </ul>
             </div>
             </div>
-            </nav>
+            </div>
+        </nav>
             <div class="card">
     <div class="card mt-3">
     <div class="card-body">

@@ -1,5 +1,5 @@
 <?php 
-    require_once 'connect.php';
+    require_once '../connect.php';
     if(isset($_POST['submit'])){
         $id = $_POST['Id_buku'];
         $n_nama_buku = $_POST['Nama_buku'];

@@ -48,7 +48,7 @@
                
                 <ul class="list-unstyled px-2">
                     <li class="active"><a href="#" class="text-decoration-none px-3 py-2 d-block"><ion-icon name="speedometer-outline" class="me-2"></ion-icon>Dashboard</a></li>
-                    <li class=""><a href="index.php" class="text-decoration-none px-3 py-2 d-block"><ion-icon name="compass-outline" class="me-2"></ion-icon>Data Buku</a></li>
+                    <li class=""><a href="data/index.php" class="text-decoration-none px-3 py-2 d-block"><ion-icon name="compass-outline" class="me-2"></ion-icon>Data Buku</a></li>
                     <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block"><ion-icon name="people" class="me-2"></ion-icon>Data Anggota</a></li>
                     <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block"><ion-icon name="receipt-outline" class="me-2"></ion-icon>Data Peminjam</a></li>
                 </ul>
@@ -67,12 +67,12 @@
 
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Perpustakaan</a>
-                <ion-icon name="book-outline"></ion-icon>
+                <a class="navbar-brand" href="#">Perpustakaan<ion-icon name="book-outline" class="ms-2"></ion-icon></a>
+                
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
+            <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Home</a>

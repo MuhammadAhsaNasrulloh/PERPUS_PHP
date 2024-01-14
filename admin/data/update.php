@@ -1,5 +1,5 @@
 <?php 
-    require_once 'connect.php';
+    require_once '../connect.php';
     if(isset($_GET['id'])){
         $id = $_GET['id'];
         $q = $conn->query("SELECT * FROM buku WHERE Id_buku = '$id'");
