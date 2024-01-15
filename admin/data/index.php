@@ -12,6 +12,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style>
         body{
             background : #eee;
@@ -50,16 +51,16 @@
                 <h1 class="fs-4"><span class="bg-white text-dark rounded-2 shadow px-2 me-2">PERPUS</span><span class="text-white">SMKN 1 SUBANG</span></h1>
                
                 <ul class="list-unstyled px-2">
-                    <li class=""><a href="../dashboard.php" class="text-decoration-none px-3 py-2 d-block"><ion-icon name="speedometer-outline" class="me-2"></ion-icon>Dashboard</a></li>
-                    <li class="active"><a href="#" class="text-decoration-none px-3 py-2 d-block"><ion-icon name="compass-outline" class="me-2"></ion-icon>Data Buku</a></li>
-                    <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block"><ion-icon name="people" class="me-2"></ion-icon>Data Anggota</a></li>
-                    <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block"><ion-icon name="receipt-outline" class="me-2"></ion-icon>Data Peminjam</a></li>
+                    <li class=""><a href="../dashboard.php" class="text-decoration-none px-3 py-2 d-block"><i class="bi bi-speedometer2 me-2"></i>Dashboard</a></li>
+                    <li class="active"><a href="#" class="text-decoration-none px-3 py-2 d-block"><i class="bi bi-box-seam me-2"></i>Data Buku</a></li>
+                    <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block"><i class="bi bi-people-fill me-2"></i>Data Anggota</a></li>
+                    <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block"><i class="bi bi-archive me-2"></i>Data Peminjam</a></li>
                 </ul>
                 
                 <hr class="h-color mx-3">
                 <ul class="list-unstyled px-2">
-                    <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block"><ion-icon name="settings" class="me-2"></ion-icon>Setting</a></li>
-                    <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block"><ion-icon name="person-circle-outline" class="me-2"></ion-icon>Account</a></li>
+                    <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block"><i class="bi bi-gear me-2"></i>Setting</a></li>
+                    <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block"><i class="bi bi-person-circle me-2"></i>Account</a></li>
                 </ul>
             </div>
 

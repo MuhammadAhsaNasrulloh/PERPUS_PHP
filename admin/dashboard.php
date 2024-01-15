@@ -57,8 +57,8 @@
                 <hr class="h-color mx-3">
                 <ul class="list-unstyled px-2 d-flex">
                     <div class="d-flex flex-column">
-                        <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block"><i class="bi bi-gear me-2"></i></ion-icon>Setting</a></li>
-                        <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block"><i class="bi bi-person-circle me-2"></i></ion-icon>Account</a></li>
+                        <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block"><i class="bi bi-gear me-2"></i>Setting</a></li>
+                        <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block"><i class="bi bi-person-circle me-2"></i>Account</a></li>
                 </div>
                 </ul>
             </div>
@@ -67,7 +67,7 @@
         <!-- sidebar end -->
         <!-- content section -->
         <div class="content">
-
+            <!-- navbar start -->
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">Perpustakaan<ion-icon name="book-outline" class="ms-2"></ion-icon></a>
@@ -90,6 +90,35 @@
             </div>
             </div>
             </nav>
+            <!-- navbar end -->
+            <!-- main section -->
+            <div class="container-fluid">
+                <div class="d-flex">
+                    <div class="d-flex flex-row">
+                    <div class="card mt-4 ms-2" style="width: 18rem; height: 12rem;">   
+                    <img src="../img/book.png" class="card-img ms-2" alt="buku" style="height : 5rem; width : 5rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Data Buku</h5>
+                            <a href="data/index.php" class="btn btn-primary">Lihat Data</a>
+                        </div>
+                    </div>
+                    <div class="card mt-4 ms-3" style="width: 18rem; height: 12rem;">   
+                    <img src="../img/book.png" class="card-img ms-2" alt="buku" style="height : 5rem; width : 5rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Data Anggota</h5>
+                            <a href="#" class="btn btn-primary">Lihat Data</a>
+                        </div>
+                    </div>
+                    <div class="card mt-4 ms-3" style="width: 18rem; height: 12rem;">   
+                    <img src="../img/book.png" class="card-img ms-2" alt="buku" style="height : 5rem; width : 5rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Data Peminjam</h5>
+                            <a href="#" class="btn btn-primary">Lihat Data</a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
             </div>
             <!-- content section end -->
     </div>
