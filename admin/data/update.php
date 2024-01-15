@@ -44,8 +44,8 @@
                 <h1 class="fs-4"><span class="bg-white text-dark rounded-2 shadow px-2 me-2">PERPUS</span><span class="text-white">SMKN 1 SUBANG</span></h1>
                
                 <ul class="list-unstyled px-2">
-                    <li class="active"><a href="#" class="text-decoration-none px-3 py-2 d-block"><i class="bi bi-speedometer2 me-2"></i>Dashboard</a></li>
-                    <li class=""><a href="index.php" class="text-decoration-none px-3 py-2 d-block"><i class="bi bi-box-seam me-2"></i></ion-icon>Data Buku</a></li>
+                    <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block"><i class="bi bi-speedometer2 me-2"></i>Dashboard</a></li>
+                    <li class="active"><a href="index.php" class="text-decoration-none px-3 py-2 d-block"><i class="bi bi-box-seam me-2"></i></ion-icon>Data Buku</a></li>
                     <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block"><i class="bi bi-people-fill me-2"></i>Data Anggota</a></li>
                     <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block"><i class="bi bi-archive me-2"></i></ion-icon>Data Peminjam</a></li>
                 </ul>
@@ -109,8 +109,10 @@
                     </div>
                     <input type="submit" name="submit" value="Ubah Data" class="d-flex btn btn-primary"  style="border-radius : 5px; padding : 5px 7px;" required>
                 </form>
-                <a class="btn btn-primary d-flex align-items-end mb-2 position-absolute top-0 end-0 mt-2 me-2" href="index.php" style="width: max-content;">Kembali</a>
-                </div>
+                <div class="back d-flex justify-content-end">
+                <a class="btn btn-primary d-flex align-items-end mb-3  mt-2 me-2" href="index.php" style="width: max-content;">Kembali</a>
+                </div>    
+            </div>
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

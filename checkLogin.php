@@ -4,7 +4,7 @@ if(isset($_POST['submit'])){
     $id_admin = $_POST['id_admin'];
     $password = $_POST['password'];
 
-    $q = $conn->query("SELECT * FROM admin WHERE Id_admin='$id_admin' AND password = '$password'");
+    $q = $conn->query("SELECT Id_admin, password FROM admin WHERE Id_admin='$id_admin' && password = '$password'");
     if($q){
         echo "<script>alert('SELAMAT DATANG KEMBALI'); window.location.href='admin/dashboard.php'</script>";
     }else{

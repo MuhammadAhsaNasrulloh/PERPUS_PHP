@@ -60,7 +60,7 @@
                 <hr class="h-color mx-3">
                 <ul class="list-unstyled px-2">
                     <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block"><i class="bi bi-gear me-2"></i>Setting</a></li>
-                    <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block"><i class="bi bi-person-circle me-2"></i>lAccount</a></li>
+                    <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block"><i class="bi bi-person-circle me-2"></i>Account</a></li>
                 </ul>
             </div>
 
@@ -95,8 +95,8 @@
             <div class="card">
     <div class="card mt-3">
     <div class="card-body">
-    <div class="card-title"><h3>Formulir Data Buku</h3></div>
-    <form method="post" action="add.php">
+    <div class="card-title ms-2"><h3>Formulir Data Buku</h3></div>
+    <form method="post" action="add.php" class="ms-2">
         <div class="mb-3">
             <label for="" class="form-label">Nama Buku</label><br>
             <input type="text" name="Nama_buku" placeholder="Nama Buku" required><br>
