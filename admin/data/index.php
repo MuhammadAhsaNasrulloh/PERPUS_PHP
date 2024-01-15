@@ -60,7 +60,7 @@
                 <hr class="h-color mx-3">
                 <ul class="list-unstyled px-2">
                     <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block"><i class="bi bi-gear me-2"></i>Setting</a></li>
-                    <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block"><i class="bi bi-person-circle me-2"></i>Account</a></li>
+                    <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block"><i class="bi bi-person-circle me-2"></i>lAccount</a></li>
                 </ul>
             </div>
 

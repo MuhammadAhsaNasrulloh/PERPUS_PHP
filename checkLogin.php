@@ -1,20 +1,16 @@
-<?php 
+<?php
 require_once 'admin/connect.php';
-if(isset($_POST['btnSubmit'])){
-    $n_admin = $_POST['Nama_admin'];
-    $username = $_POST['Username'];
-    $password = $_POST['Password'];
-// kode buku bernilai null atau '' karena kita set auto incerement
-    $q = $conn->query("INSERT INTO admin (Nama_admin, Username, password) VALUES ('$n_admin', '$username', '$password')");
+if(isset($_POST['submit'])){
+    $id_admin = $_POST['id_admin'];
+    $password = $_POST['password'];
+
+    $q = $conn->query("SELECT * FROM admin WHERE Id_admin='$id_admin' AND password = '$password'");
     if($q){
-        //pesan jika data tersimpan
-        echo "<script>alert('Data berhasil disimpan'); window.location.href='Login.php'</script>";
+        echo "<script>alert('SELAMAT DATANG KEMBALI'); window.location.href='admin/dashboard.php'</script>";
     }else{
-        //pesan jika data gagal tersimpan
-        echo "<script>alert('Data gagal di simpan'); window.location.href='Register.php'</script>";
+        echo "<script>alert('Password atau Id Salah'); window.location.href='Login.php'</script>";
     }
 }else{
-    // jika coba akses langsung halaman ini akan diredirect ke halaman index
     header('Location : Login.php');
 }
 ?>
