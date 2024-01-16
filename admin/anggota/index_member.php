@@ -93,7 +93,7 @@
                         <div class="dropdown ms-3">
                         <i class="bi bi-person-circle me-2"></i>Account
                         <div class="dropdown-content">
-                            <a href="../Logout.php">Log out</a>
+                            <a href="../../Logout.php">Log out</a>
                         </div>
                         </div>
                         

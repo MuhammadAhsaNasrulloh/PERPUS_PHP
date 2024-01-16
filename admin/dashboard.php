@@ -149,7 +149,7 @@ if (!isset($_SESSION['id_admin'])) {
                     <img src="../img/book.png" class="card-img ms-2" alt="buku" style="height : 5rem; width : 5rem;">
                         <div class="card-body">
                             <h5 class="card-title">Data Anggota</h5>
-                            <a href="#" class="btn btn-primary">Lihat Data</a>
+                            <a href="anggota/index_member.php" class="btn btn-primary">Lihat Data</a>
                         </div>
                     </div>
                     <div class="card mt-4 ms-3" style="width: 18rem; height: 12rem;">   
