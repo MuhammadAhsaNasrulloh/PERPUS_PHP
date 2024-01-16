@@ -87,7 +87,7 @@ if (!isset($_SESSION['id_admin'])) {
                 <ul class="list-unstyled px-2">
                     <li class="active"><a href="#" class="text-decoration-none px-3 py-2 d-block"><i class="bi bi-speedometer2 me-2"></i>Dashboard</a></li>
                     <li class=""><a href="data/index.php" class="text-decoration-none px-3 py-2 d-block"><i class="bi bi-box-seam me-2"></i></ion-icon>Data Buku</a></li>
-                    <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block"><i class="bi bi-people-fill me-2"></i>Data Anggota</a></li>
+                    <li class=""><a href="anggota/index_member.php" class="text-decoration-none px-3 py-2 d-block"><i class="bi bi-people-fill me-2"></i>Data Anggota</a></li>
                     <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block"><i class="bi bi-archive me-2"></i></ion-icon>Data Peminjam</a></li>
                 </ul>
                 
@@ -102,7 +102,7 @@ if (!isset($_SESSION['id_admin'])) {
                         </div>
                         </div>
                         
-                </div>
+                    </div>
                 </ul>
             </div>
 

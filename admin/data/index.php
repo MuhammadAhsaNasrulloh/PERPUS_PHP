@@ -40,7 +40,36 @@
         .sidebar li a{
             color: #fff;
         }
-        
+        .dropdown {
+            color : #fff;
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            min-width : 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            padding: 8px 10px;
+            z-index: 1;
+            color : #222;
+            border-radius : 5px;
+        }
+
+        .dropdown-content a{
+            text-decoration : none;
+            color : #333;
+        }
+
+        .dropdown-content a:hover{
+            color : #219ebc;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -53,14 +82,22 @@
                 <ul class="list-unstyled px-2">
                     <li class=""><a href="../dashboard.php" class="text-decoration-none px-3 py-2 d-block"><i class="bi bi-speedometer2 me-2"></i>Dashboard</a></li>
                     <li class="active"><a href="#" class="text-decoration-none px-3 py-2 d-block"><i class="bi bi-box-seam me-2"></i>Data Buku</a></li>
-                    <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block"><i class="bi bi-people-fill me-2"></i>Data Anggota</a></li>
+                    <li class=""><a href="../anggota/index_member.php" class="text-decoration-none px-3 py-2 d-block"><i class="bi bi-people-fill me-2"></i>Data Anggota</a></li>
                     <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block"><i class="bi bi-archive me-2"></i>Data Peminjam</a></li>
                 </ul>
                 
                 <hr class="h-color mx-3">
                 <ul class="list-unstyled px-2">
-                    <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block"><i class="bi bi-gear me-2"></i>Setting</a></li>
-                    <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block"><i class="bi bi-person-circle me-2"></i>Account</a></li>
+                <div class="d-flex flex-column">
+                        <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block"><i class="bi bi-gear me-2"></i>Setting</a></li>
+                        <div class="dropdown ms-3">
+                        <i class="bi bi-person-circle me-2"></i>Account
+                        <div class="dropdown-content">
+                            <a href="../Logout.php">Log out</a>
+                        </div>
+                        </div>
+                        
+                    </div>
                 </ul>
             </div>
 
