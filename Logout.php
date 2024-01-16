@@ -1,3 +1,6 @@
-<?php 
-    echo"<script>window.location.href ='Login.php'</script>";
+<?php
+session_start();
+session_destroy();
+header("location: Login.php");
+exit();
 ?>

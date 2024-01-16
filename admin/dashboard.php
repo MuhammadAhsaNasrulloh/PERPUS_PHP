@@ -1,3 +1,11 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['id_admin'])) {
+    header("location: login_form.php");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,7 +40,36 @@
         .sidebar li a{
             color: #fff;
         }
-        
+        .dropdown {
+            color : #fff;
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            min-width : 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            padding: 8px 10px;
+            z-index: 1;
+            color : #222;
+            border-radius : 5px;
+        }
+
+        .dropdown-content a{
+            text-decoration : none;
+            color : #333;
+        }
+
+        .dropdown-content a:hover{
+            color : #219ebc;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
     </style>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -58,7 +95,13 @@
                 <ul class="list-unstyled px-2 d-flex">
                     <div class="d-flex flex-column">
                         <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block"><i class="bi bi-gear me-2"></i>Setting</a></li>
-                        <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block"><i class="bi bi-person-circle me-2"></i>Account</a></li>
+                        <div class="dropdown ms-3">
+                        <i class="bi bi-person-circle me-2"></i>Account
+                        <div class="dropdown-content">
+                            <a href="../Logout.php">Log out</a>
+                        </div>
+                        </div>
+                        
                 </div>
                 </ul>
             </div>
@@ -81,7 +124,7 @@
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../Logout.php">Log out</a>
+                    <a class="nav-link" href="#">Features</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Pricing</a>
