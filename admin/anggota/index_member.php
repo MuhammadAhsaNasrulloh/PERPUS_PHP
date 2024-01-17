@@ -133,22 +133,34 @@
     <div class="card mt-3">
     <div class="card-body">
     <div class="card-title ms-2"><h3>Formulir Data Anggota</h3></div>
-    <form method="post" action="add.php" class="ms-2">
+    <form method="post" action="add_member.php" class="ms-2">
         <div class="mb-3">
-            <label for="" class="form-label">Nama Buku</label><br>
-            <input type="text" name="Nama_buku" placeholder="Nama Buku" required><br>
+            <label for="" class="form-label">Id Anggota</label><br>
+            <input type="text" name="Id_anggota" placeholder="Id Anggota" required><br>
         </div>
         <div class="mb-3">
-            <label for="" class="form-label">Nama Penerbit</label><br>
-            <input type="text" name="Nama_penerbit" placeholder="Nama Penerbit" required><br>
+            <label for="" class="form-label">Nama Anggota</label><br>
+            <input type="text" name="Nama_anggota" placeholder="Nama Anggota" required><br>
         </div>
         <div class="mb-3">
-            <label for="" class="form-label">Jumlah Buku</label><br>
-            <input type="number" name="Jumlah_buku" placeholder="Jumlah Buku" required><br>
+            <label for="" class="form-label">Jurusan Anggota</label><br>
+            <input type="type" name="Jurusan_anggota" placeholder="Jurusan" required><br>
         </div>
         <div class="mb-3">
-            <label for="" class="form-label">Tahun Terbit</label><br>
-            <input type="date" name="Tahun_terbit" placeholder="Tahun terbit" required><br>
+            <label for="" class="form-label">Kelas Anggota</label><br>
+            <select type="text" name="kelas_anggota" id="kelas_anggota" class="p-1">
+                <option value="X">X</option>
+                <option value="XI">XI</option>
+                <option value="XII">XII</option>
+            </select>
+            <br>
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">Jenis Kelamin</label><br>
+            <select name="jenis_kelamin" id="jenis_kelamin" class="p-1">
+                <option value="L">L</option>
+                <option value="P">P</option>
+            </select><br>
         </div>
         <input type="submit" name="submit" value="Tambah Data" class="btn btn-primary">
     </form>
@@ -159,28 +171,27 @@
     <table class="table table-success table-striped mt-3">
         <thead>              
         <tr>
-            <th scope="col">No.</th>
-            <th scope="col">Nama Buku</th>
-            <th scope="col">Nama Penerbit</th>
-            <th scope="col">Jumlah buku</th>
-            <th scope="col">Tahun terbit</th>
+            <th scope="col">ID Anggota</th>
+            <th scope="col">Nama Anggota</th>
+            <th scope="col">Jurusan Anggota</th>
+            <th scope="col">Kelas Anggota</th>
+            <th scope="col">Jenis Kelamin</th>
             <th scope="col" colspan="2">Aksi</th>
         </tr>
         </thead>
     <?php
         //tampilkan semua data 
-        $q = $conn->query("SELECT * FROM buku");
-        $no = 1;//kode buku
+        $q = $conn->query("SELECT * FROM anggota");
         while($dt = $q->fetch_assoc()):
         ?>
         <tr>
-            <td><?= $no++?></td>
-            <td><?= $dt['Nama_buku']?></td>
-            <td><?= $dt['Nama_penerbit']?></td>
-            <td><?= $dt['Jumlah_buku']?></td>
-            <td><?= $dt['Tahun_terbit']?></td>
-            <td><a href="update.php?id=<?= $dt['Id_buku']?>" class="text-dark">Ubah</a></td>
-            <td><a href="delete.php?id=<?= $dt['Id_buku']?>" class="text-dark" onclick="return confirm('Anda yakin menghapus data ini?')">Hapus</a></td>
+            <td><?= $dt['Id_anggota']?></td>
+            <td><?= $dt['Nama_anggota']?></td>
+            <td><?= $dt['Jurusan_anggota']?></td>
+            <td><?= $dt['Kelas_anggota']?></td>
+            <td><?= $dt['Jenis_kelamin']?></td>
+            <td><a href="update_member.php?id=<?= $dt['Id_anggota']?>" class="text-dark">Ubah</a></td>
+            <td><a href="delete_member.php?id=<?= $dt['Id_anggota']?>" class="text-dark" onclick="return confirm('Anda yakin menghapus data ini?')">Hapus</a></td>
         </tr>
     <?php 
         endwhile;
