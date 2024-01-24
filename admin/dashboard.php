@@ -1,11 +1,22 @@
 <?php
 session_start();
-
+require_once 'connect.php';
 if (!isset($_SESSION['id_admin'])) {
-    header("location: login_form.php");
+    header("location: Login.php");
     exit();
 }
+$query = $conn -> query(
+    "SELECT Nama_buku as name,
+    SUM(Jumlah_buku) as amount
+    FROM buku GROUP BY Nama_buku"
+);
+
+foreach($query as $data){
+    $buku[] = $data['name'];
+    $amount[] = $data['amount'];
+}
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,6 +24,7 @@ if (!isset($_SESSION['id_admin'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard PERPUSTAKAAN SMKN 1 SUBANG</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         body{
             background : #eee;
@@ -70,6 +82,10 @@ if (!isset($_SESSION['id_admin'])) {
         .dropdown:hover .dropdown-content {
             display: block;
         }
+        .small-chart{
+            max-width : 50rem;
+            max-height : 25rem;
+        }
     </style>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -126,21 +142,21 @@ if (!isset($_SESSION['id_admin'])) {
                 <div class="d-flex">
                     <div class="d-flex flex-row">
                     <div class="card mt-4 ms-2" style="width: 18rem; height: 12rem;">   
-                    <img src="../img/book.png" class="card-img ms-2" alt="buku" style="height : 5rem; width : 5rem;">
+                    <img src="../img/book-2.png" class="card-img ms-2 mt-2" alt="buku" style="height : 5rem; width : 5rem;">
                         <div class="card-body">
                             <h5 class="card-title">Data Buku</h5>
                             <a href="data/index.php" class="btn btn-primary">Lihat Data</a>
                         </div>
                     </div>
                     <div class="card mt-4 ms-3" style="width: 18rem; height: 12rem;">   
-                    <img src="../img/book.png" class="card-img ms-2" alt="buku" style="height : 5rem; width : 5rem;">
+                    <img src="../img/people.png" class="card-img ms-3 mt-4" alt="buku" style="height : 4rem; width : 5rem;">
                         <div class="card-body">
                             <h5 class="card-title">Data Anggota</h5>
                             <a href="anggota/index_member.php" class="btn btn-primary">Lihat Data</a>
                         </div>
                     </div>
                     <div class="card mt-4 ms-3" style="width: 18rem; height: 12rem;">   
-                    <img src="../img/book.png" class="card-img ms-2" alt="buku" style="height : 5rem; width : 5rem;">
+                    <img src="../img/archive.png" class="card-img ms-2 mt-2" alt="buku" style="height : 5rem; width : 5rem;">
                         <div class="card-body">
                             <h5 class="card-title">Data Peminjam</h5>
                             <a href="#" class="btn btn-primary">Lihat Data</a>
@@ -149,9 +165,64 @@ if (!isset($_SESSION['id_admin'])) {
                     </div>
                 </div>
             </div>
+            <div>
+             <canvas class="small-chart" id="myChart"></canvas>
+            </div>
+
+
             </div>
             <!-- content section end -->
     </div>
+    <!-- chart js -->
+    
+    <!-- chart section -->
+    <script>
+        const ctx = document.getElementById('myChart');
+
+        const labels = <?php echo json_encode($buku) ?>;
+        const data = {
+        labels: labels,
+        datasets: [{
+            label: 'My First Dataset',
+            data: [65, 59, 80, 81, 56, 55, 40],
+            backgroundColor: [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(255, 159, 64, 0.2)',
+            'rgba(255, 205, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(153, 102, 255, 0.2)',
+            'rgba(201, 203, 207, 0.2)'
+            ],
+            borderColor: [
+            'rgb(255, 99, 132)',
+            'rgb(255, 159, 64)',
+            'rgb(255, 205, 86)',
+            'rgb(75, 192, 192)',
+            'rgb(54, 162, 235)',
+            'rgb(153, 102, 255)',
+            'rgb(201, 203, 207)'
+            ],
+            borderWidth: 1
+        }]
+        };
+        const config = {
+        type: 'bar',
+        data: data,
+        options: {
+            scales: {
+            y: {
+                beginAtZero: true
+            }
+            }
+        },
+        };
+        var myChart = new Chart(
+            document.getElementById('myChart');
+            config
+        );
+    </script>
+
     <!-- Bootstrap 5 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script>
