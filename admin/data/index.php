@@ -77,7 +77,7 @@
         <div class="sidebar" id="side_nav">
             <div class="header-box px-2 pt-3 pb-4">
                 
-                <h1 class="fs-4"><span class="bg-white text-dark rounded-2 shadow px-2 me-2">PERPUS</span><span class="text-white">SMKN 1 SUBANG</span></h1>
+                <h1 class="fs-4"><span>PERPUS</span><span class="text-white">SMKN 1 SUBANG</span></h1>
                
                 <ul class="list-unstyled px-2">
                     <li class=""><a href="../dashboard.php" class="text-decoration-none px-3 py-2 d-block"><i class="bi bi-speedometer2 me-2"></i>Dashboard</a></li>
