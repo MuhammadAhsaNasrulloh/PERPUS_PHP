@@ -1,5 +1,5 @@
 <?php
-    require_once '../admin/connect.php';
+require_once '../admin/connect.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -53,16 +53,42 @@
             <div class="title">
                 <h3 class="mt-3">Dashboard</h3>
             </div>
+            <hr>
+
             <!-- contenct section -->
-            <div class="lg-3 mt-5 d-flex">
-            <div class="card" style="width: 18rem;">
-                <img src="../img/book.png" class="card-img-top" alt="buku" width="100px" height="250px">
-                <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <div class="container-fluid">
+                <div class="row">
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="../img/book.png" class="card-img-top" alt="buku" width="100px" height="250px">
+                        <div class="card-body">
+                        <p class="card-title"><b> Novel Series Bumi - Bumi (Tere Liye)</b></p>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
                 </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="../img/book.png" class="card-img-top" alt="buku" width="100px" height="250px">
+                        <div class="card-body">
+                        <p class="card-title"><b> Novel Series Bumi - Bumi (Tere Liye)</b></p>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </main>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="../img/book.png" class="card-img-top" alt="buku" width="100px" height="250px">
+                        <div class="card-body">
+                        <p class="card-title"><b> Novel Series Bumi - Bumi (Tere Liye)</b></p>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="../img/book.png" class="card-img-top" alt="buku" width="100px" height="250px">
+                        <div class="card-body">
     </section>
 
     <!-- boostrap 5 -->

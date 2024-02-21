@@ -1,5 +1,5 @@
-<?php 
-    session_start();
+<?php
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -33,9 +33,6 @@
                 </div>
                 <div class="field input">
                     <input type="submit" name="submit" value="Login" class="btn mt-2" required>
-                </div>
-                <div class="links">
-                    <p class="title">Don't have an account? <a href="Register.php">SignUp now</a> </p>
                 </div>
             </form>
         </div>
